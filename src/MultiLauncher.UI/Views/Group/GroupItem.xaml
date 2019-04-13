@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="MultiLauncher.UI.GroupItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MultiLauncher.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="100">
+
+    <UserControl.Resources>
+        <Style TargetType="UserControl">
+            <Style.Triggers>
+
+                <DataTrigger Binding="{Binding}" Value="{x:Type local:GroupItemViewModel}">
+                    <Setter Property="ContentTemplate">
+                        <Setter.Value>
+                            <DataTemplate>
+                                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" SnapsToDevicePixels="True">
+                                    <TextBlock Text="+" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Grid>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </DataTrigger>
+                
+                <DataTrigger Binding="{Binding}" Value="{x:Null}">
+                    <Setter Property="ContentTemplate">
+                        <Setter.Value>
+                            <DataTemplate>
+                                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" SnapsToDevicePixels="True">
+
+                                    <Border CornerRadius="5" BorderBrush="Black" BorderThickness="1" />
+
+                                    <Border>
+                                        <UniformGrid Rows="2" Columns="2" >
+                                            <Image x:Name="ImageFrame1" Stretch="UniformToFill" Margin="5 5 1 1" Width="32" Height="32" />
+                                            <Image x:Name="ImageFrame2" Stretch="UniformToFill" Margin="1 5 5 1" Width="32" Height="32" />
+                                            <Image x:Name="ImageFrame3" Stretch="UniformToFill" Margin="5 1 1 5" Width="32" Height="32" />
+                                            <Image x:Name="ImageFrame4" Stretch="UniformToFill" Margin="1 1 5 5" Width="32" Height="32" />
+                                        </UniformGrid>
+                                    </Border>
+                                </Grid>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </DataTrigger>
+                
+            </Style.Triggers>
+        </Style>
+            
+            
+    </UserControl.Resources>
+
+    <Grid>
+        
+    </Grid>
+    
+    <!--<Grid HorizontalAlignment="Center" VerticalAlignment="Center" SnapsToDevicePixels="True">
+
+        <Border CornerRadius="5" BorderBrush="Black" BorderThickness="1">
+            --><!--<Border.Effect>
+                <BlurEffect Radius="5" KernelType="Gaussian"/>
+            </Border.Effect>--><!--
+        </Border>
+        
+        <Border  >
+            <UniformGrid Rows="2" Columns="2" >
+                <Image x:Name="ImageFrame1" Stretch="UniformToFill" Margin="5 5 1 1" Width="32" Height="32" />
+                <Image x:Name="ImageFrame2" Stretch="UniformToFill" Margin="1 5 5 1" Width="32" Height="32" />
+                <Image x:Name="ImageFrame3" Stretch="UniformToFill" Margin="5 1 1 5" Width="32" Height="32" />
+                <Image x:Name="ImageFrame4" Stretch="UniformToFill" Margin="1 1 5 5" Width="32" Height="32" />
+            </UniformGrid>
+        </Border>
+    </Grid>-->
+
+    <!--<TextBlock Text="Group name here" 
+                       Grid.Row="1"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       TextAlignment="Center" />-->
+
+</UserControl>

@@ -6,7 +6,25 @@
         xmlns:local="clr-namespace:MultiLauncher.UI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid>
+
+        <Grid.ColumnDefinitions>
+            <!-- Side menu -->
+            <ColumnDefinition Width="auto" />
+            <!-- Main content -->
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Side menu -->
+        <Grid Width="60">
+            
+        </Grid>
+        
+        <!-- main contnet -->
+        <Grid>
+            
+        </Grid>
         
     </Grid>
 </Window>

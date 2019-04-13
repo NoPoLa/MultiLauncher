@@ -1,4 +1,7 @@
-﻿using System.Linq;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 
 namespace MultiLauncher.UI
@@ -10,51 +13,20 @@ namespace MultiLauncher.UI
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            try
-            {
-                foreach (var arg in e.Args)
-                {
-                    MessageBox.Show(arg);
-                }
-
-
-                // Start the program as normal if there are no startup arguments
-                if (!e.Args.Any())
-                    return;
-
-                if (!ValidateArguments(e.Args))
-                    // TODO : Show error indicating the arguments where invalid.
-                    return;
-
-
-                // TODO : Start the files
-
-                this.Shutdown(0);
-            }
-            catch
-            {
-
-            }
-
             base.OnStartup(e);
+
+            RegisterDependencies();
         }
 
-        private bool ValidateArguments(string[] args)
+        private void RegisterDependencies()
         {
-            // To many arguments
-            if (args.Length > 1)
-                return false;
+            IServiceCollection collection = new ServiceCollection();
 
-            // Not a file
-            if (args[0].Split('.').Length < 2)
-                return false;
+            // Application ViewModel
+            collection.AddSingleton(typeof(ApplicationViewModel));
 
-            // Not a supported filetype
-            if (args[0].Split('.').Last() != "filetyp or types")
-                return false;
-
-            return true;
+            // Build the provider
+            DI.BuildServiceProvider(collection);
         }
-
     }
 }
