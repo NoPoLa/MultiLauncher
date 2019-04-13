@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiLauncher.Core", "Multi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiLauncher.UI", "MultiLauncher.UI\MultiLauncher.UI.csproj", "{9DADBA2F-2441-4250-888F-3930C6FDE686}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiLauncher.UI.Tests", "MultiLauncher.UI.Tests\MultiLauncher.UI.Tests.csproj", "{ACE85597-C958-4C20-922E-D2621D99E202}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiLauncher.Persistence", "MultiLauncher.Persistence\MultiLauncher.Persistence.csproj", "{6FFB77B6-E8B2-4082-BCE4-05FFEBAA64E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{9DADBA2F-2441-4250-888F-3930C6FDE686}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DADBA2F-2441-4250-888F-3930C6FDE686}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DADBA2F-2441-4250-888F-3930C6FDE686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE85597-C958-4C20-922E-D2621D99E202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE85597-C958-4C20-922E-D2621D99E202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE85597-C958-4C20-922E-D2621D99E202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE85597-C958-4C20-922E-D2621D99E202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FFB77B6-E8B2-4082-BCE4-05FFEBAA64E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FFB77B6-E8B2-4082-BCE4-05FFEBAA64E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FFB77B6-E8B2-4082-BCE4-05FFEBAA64E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FFB77B6-E8B2-4082-BCE4-05FFEBAA64E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
